@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cSs-9r-BYI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GoodNews-->
+        <scene sceneID="6Su-4c-LHm">
+            <objects>
+                <tableViewController id="ZoQ-vi-9Uc" customClass="NewsListTableViewController" customModule="GoodNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4iK-VM-hfK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="80" id="uPX-S5-jjW" customClass="ArticleTableViewCell" customModule="GoodNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uPX-S5-jjW" id="hmU-Ae-RE0">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DFX-bn-A7g">
+                                            <rect key="frame" x="20" y="11" width="353" height="58"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3D-G9-9Vu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur6-ZF-Uga">
+                                                    <rect key="frame" x="0.0" y="41" width="353" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DFX-bn-A7g" secondAttribute="bottom" id="cNU-zZ-Vk1"/>
+                                        <constraint firstItem="DFX-bn-A7g" firstAttribute="top" secondItem="hmU-Ae-RE0" secondAttribute="topMargin" id="dCm-7A-B34"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="DFX-bn-A7g" secondAttribute="trailing" id="g8y-35-5Dw"/>
+                                        <constraint firstItem="DFX-bn-A7g" firstAttribute="leading" secondItem="hmU-Ae-RE0" secondAttribute="leadingMargin" id="v84-DJ-juL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Ur6-ZF-Uga" id="onx-Is-VmH"/>
+                                    <outlet property="titleLabel" destination="V3D-G9-9Vu" id="IRY-Mw-B3l"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZoQ-vi-9Uc" id="Jpe-Hg-Cwn"/>
+                            <outlet property="delegate" destination="ZoQ-vi-9Uc" id="HZN-YY-fAJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="GoodNews" id="NEb-py-20P"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8o9-C5-e4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.44274809160299" y="-82.394366197183103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QZT-CF-9M4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cSs-9r-BYI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O3Y-7v-HlZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZoQ-vi-9Uc" kind="relationship" relationship="rootViewController" id="EHj-Gb-1ae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fV9-VB-PpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144.27480916030532" y="-82.394366197183103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
